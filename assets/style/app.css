@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html:is(html),
+body:is(html) {
+    font-size: 62.5%;
+}
+
+html:is(body),
+body:is(body) {
+    font-size: 1.6rem;
+}
+
+body {
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover {
+    color: dimgrey;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 7rem auto 6rem;
+    grid-template-areas:
+        "header header header"
+        ". content ."
+        "footer footer footer";
+}
+
+header {
+    background-color: cadetblue;
+    color: whitesmoke;
+    grid-area: header;
+}
+
+header nav {
+    text-align: center;
+}
+
+main {
+    grid-area: content;
+    height: fit-content;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    color: cadetblue;
+}
+
+.book-title {
+    text-align: center;
+    padding: 0.8rem 1rem;
+    color: cadetblue;
+}
+
+.error404 {
+    font-size: 4rem;
+}
+
+.cover-description {
+    width: 90%;
+    margin: 0 auto 0.5rem;
+}
+
+.block-book {
+    width: 90vw;
+    margin: auto;
+}
+
+.block-book img {
+    height: 20rem;
+    padding-right: 1rem;
+    float: left;
+}
+
+.clearfix::after {
+
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.book-description {
+    margin: 0;
+    text-align: justify;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0;
+    gap: 0.3rem;
+}
+
+.infos span a {
+    color: black;
+}
+
+.infos span a:hover {
+    color: dimgrey;
+}
+
+.button-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    width: 7rem;
+    color: whitesmoke;
+    background-color: cadetblue;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    background-color: cadetblue;
+    grid-area: footer;
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    width: fit-content;
+}
+
+/*  
+3. Blood of Elves
+4. Time of Contempt
+5. Baptism of Fire
+6. The Tower of The Swallow
+7. The Lady of the Lake
+8. Season of Storms
+*/

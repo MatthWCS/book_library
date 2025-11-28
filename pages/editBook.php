@@ -55,7 +55,7 @@
                 ":edition" => $_POST['edition']
             ]);
 
-            // Rediriger vers la liste des produits
+            // Rediriger vers la liste des livres
             header("Location: index.php?page=home");
             exit();
         }

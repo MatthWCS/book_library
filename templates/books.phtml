@@ -1,0 +1,15 @@
+<main>
+    <h2>Home</h2>
+    <section>
+        <h3>Books</h3>
+        <ul>
+            <?php foreach($books as $book) : ?>
+                <li>
+                    <a class="book-title" href="showBook.php?id=<?= $book['id'] ?>">
+                        <?= $book['title'] ?>
+                    </a>
+                </li>
+            <?php endforeach ?>
+        </ul>
+    </section>
+</main>

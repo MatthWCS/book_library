@@ -30,7 +30,7 @@ function createBook(
     ]);
 }
 
-function showBooks()
+function showBooks() : array
 {
     $sql = "SELECT * FROM book ORDER BY serie_name";
 
@@ -38,10 +38,10 @@ function showBooks()
 
     $query->execute();
 
-    return $books = $query->fetchAll();
+    return $query->fetchAll();
 }
 
-function showBookById() 
+function showBookById() : array
 {
     $sql = "SELECT * FROM book WHERE id = :bookid";
 
@@ -51,10 +51,10 @@ function showBookById()
         ":bookid" => $_GET['id']
     ]);
 
-    return $book = $query->fetch();
+    return $query->fetch();
 }
 
-function deleteBookById()
+function deleteBookById() : void
 {
     $sql = "DELETE FROM book WHERE id = :bookid";
 
